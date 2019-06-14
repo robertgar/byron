@@ -117,7 +117,7 @@ footer{
 <body>
 
 <div class="topnav" id="myTopnav">
-  <a href="incio.php" class="active">Inicio</a>
+  <a href="index.php" class="active">Inicio</a>
   <a href="q1.php">Quienes Somos</a>
   <a href="casa.php">Casas</a>
   <a href="#about">Bodegas</a>
