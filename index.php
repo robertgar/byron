@@ -143,7 +143,7 @@ footer{
     <h1 >Casas</h1>
     </div>
     <div class="col-sm-6">
-      <button type="button" class="btn btn-primary" style="float:right" onClick="window.location.href='casa.html'">Ver Todos</button>
+      <button type="button" class="btn btn-primary" style="float:right" onClick="window.location.href='casa.php'">Ver Todos</button>
     </div>
   </div>
 </div>
@@ -162,7 +162,7 @@ footer{
       <div class="col-xs-3 col-sm-3 col-md-3">
         <img src="https://images.homify.com/c_fill,f_auto,h_500,q_auto,w_1280/v1511305692/p/photo/image/2329514/791a61bb-d176-4207-9676-41b26d04277c.jpg">
           <div class="carousel-caption">
-          <button type="button" class="btn btn-success button--winona" onClick="window.location.href='verca.html'">Ver</button>
+          <button type="button" class="btn btn-success button--winona" onClick="window.location.href='verca.php'">Ver</button>
         </div>
       </div>    
       <div class="col-xs-3 col-sm-3 col-md-3">
