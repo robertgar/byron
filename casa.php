@@ -119,12 +119,20 @@ footer{
 h2, span{
   color: #FFFFFF;
 }
+img{
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    width: 100% 
+}
 </style>
 </head>
 <body>
 
 <div class="topnav" id="myTopnav">
-  <a href="index.php">Inicio</a>
+  <a href="incio.php">Inicio</a>
   <a href="q1.php">Quienes Somos</a>
   <a href="casa.php" class="active">Casas</a>
   <a href="#about">Bodegas</a>
@@ -206,7 +214,7 @@ function myFunction() {
 }
 </script>
 <footer class="container-fluid bg-4 text-center">
-   <p>© 2019 Copy Right</p>
+   <p>Â© 2019 Copy Right</p>
         <p>Website indelsur.com by <a href="http://www.indelsur.operaciones@gmail.com/" target="_blank" rel="nofollow" class="link">www.gualipramos@gmail.com</a></p>
 </footer>  
 </body>
