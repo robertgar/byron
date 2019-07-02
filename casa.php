@@ -132,7 +132,7 @@ img{
 <body>
 
 <div class="topnav" id="myTopnav">
-  <a href="incio.php">Inicio</a>
+  <a href="index.php">Inicio</a>
   <a href="q1.php">Quienes Somos</a>
   <a href="casa.php" class="active">Casas</a>
   <a href="#about">Bodegas</a>
