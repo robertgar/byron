@@ -83,7 +83,7 @@ footer{
 <body>
 
 <div class="topnav" id="myTopnav">
-  <a href="incio.php">Incio</a>
+  <a href="index.php">Incio</a>
   <a href="q1.php"  class="active">Quienes Somos</a>
   <a href="casa.php">Casas</a>
   <a href="#about">Bodegas</a>
