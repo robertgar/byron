@@ -83,13 +83,13 @@ footer{
 <body>
 
 <div class="topnav" id="myTopnav">
-  <a href="incio.html">Incio</a>
-  <a href="q1.html"  class="active">Quienes Somos</a>
-  <a href="casa.html">Casas</a>
+  <a href="incio.php">Incio</a>
+  <a href="q1.php"  class="active">Quienes Somos</a>
+  <a href="casa.php">Casas</a>
   <a href="#about">Bodegas</a>
   <a href="#contact">Apartamentos</a>
   <a href="#about">Terrenos</a>
-  <a href="contacto.html">Contacto</a>
+  <a href="contacto.php">Contacto</a>
   <a href="#about" style="float:right">Inciar sesion</a>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
