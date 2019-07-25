@@ -89,7 +89,7 @@ background-color: #050505;
 <body>
 
 <div class="topnav" id="myTopnav">
-  <a href="incio.php">Inicio</a>
+  <a href="index.php">Inicio</a>
   <a href="quienes.php">Quienes Somos</a>
   <a href="apart.php">Apartamentos</a>
   <a href="casa.php">Casas</a>
