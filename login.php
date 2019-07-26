@@ -11,6 +11,7 @@ if(isset($_SESSION['use']))
 <!DOCTYPE html>
 <html>
 	<head>
+		<title>Inmuebles</title>
 		<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1"/>
 		   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 	</head>
@@ -18,7 +19,11 @@ if(isset($_SESSION['use']))
 .redondeado {
   border-radius: 20px;
 }	
-
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 </style>
 <body>
 	
@@ -30,6 +35,8 @@ if(isset($_SESSION['use']))
             <div class="card-body">
             <div id="preview_err" class="alert alert-danger" style="display:none" role="alert"></div>
                <form method="POST" id="signin_form" name="signin_form">
+               	<div id="posgre"></div>
+               	<div id="datos">
 				<div class="form-group">
 					<label>Username</label>
 					<input type="text" id="username" class="redondeado form-control"/>
@@ -41,7 +48,7 @@ if(isset($_SESSION['use']))
  
 				<center><button type="button" id="login" class="redondeado btn btn-primary btn-lg"><span class="glyphicon glyphicon-log-in"></span> Login</button></center>
 				<br />
-				
+				</div>
 			</form>
 			<div id="result"></div>
 
@@ -66,14 +73,21 @@ $.ajax({
 				},
 		 beforeSend: function(){
    
-							$('#result').html("<img src='im/log.gif' id='loader' />");
-					
+						
+			var pesra = $("<img src='im/log.gif' id='loader' />");
+						
+						
+						$('#posgre').html(pesra);
+						setTimeout(function(){
+							pesra.fadeOut(1000);
+						}, 200);	
    },
 				success: function(data){
 					if(data === "success"){
 
 						window.location = 'home1.php';
 					}else if(data === "error"){
+
 						var warning = $("<div class='alert alert-danger'>Error: Invalidos Usuario y Password</div>");
 						
 						$('#result').append(warning);
@@ -87,13 +101,6 @@ $.ajax({
 
 })
 	});
-
-
-
-
-
-
-
 </script>
 </body>	
 </html>
