@@ -63,7 +63,7 @@ ul.topnav li.right {float: right;}
 <body>
 
 <ul class="topnav">
-  <li><a class="active" href="#home">Bienvenido <?php echo $_SESSION['use']; ?></a></li>
+  <li><a class="active" href="">Bienvenido <?php echo $_SESSION['use']; ?></a></li>
   <li><a href="resgist.php">Registar</a></li>
   <li class="right"><a onclick="logut()">Cerrar Sesion</a></li>
  
