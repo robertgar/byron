@@ -9,7 +9,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <style>
 body {margin: 0;}
@@ -89,7 +88,7 @@ border-style: dashed;
 
                         <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
                             
-                        <form  method="POST">
+                        <form  method="POST" id="form1">
                                     
                             <div style="margin-bottom: 25px" >
                                         <label class="input-group">Codigo</label>
@@ -110,6 +109,10 @@ border-style: dashed;
                                         <label class="input-group">Metraje</label>
                                         <input  type="text" class=" redondeado form-control" name="met" value="" placeholder="Metraje">    
                                 </div>
+                                  <div style="margin-bottom: 25px" >
+                                        <label class="input-group">Ubicacion</label>
+                                     <input type="text" name="ub" class=" redondeado form-control">  
+                                         </div> 
                                 <div id="c1">
                                     <div style="margin-bottom: 25px" >
                                <label class="input-group">No. Dormitorio</label>
@@ -122,10 +125,7 @@ border-style: dashed;
                                         <label class="input-group">No. Baños</label>
                                      <input type="text" name="ban" class="redondeado form-control">  
                                 </div>
-                                <div style="margin-bottom: 25px" class="input-group" >
-                                        <label class="input-group">Ubicacion</label>
-                                     <input type="text" name="ub" class=" redondeado form-control">  
-                                         </div>  
+                               
 
                                 <div style="margin-bottom: 25px" >
                                         <label class="input-group">Parqueo</label>
@@ -317,10 +317,12 @@ function guardar(){
             console.log("Déjame pensar un poco...");
         },
         success: function(data){
-          if(data === "success"){
-          alert('h');
-          }else if(data === "error"){
-            
+          if(data === "corecto"){
+     alert('Insertado');
+     window.location="home1.php";
+    
+          }else {
+            alert("error")
           }
       
       }
@@ -340,8 +342,7 @@ function im1(){
             processData: false,
             success: function(response) {
                 if (response != 0) {
-                   // $(".card-img-top").attr("src", response);
-                    alert('Imagen 1 correcta ');
+                 
 im2();
                 } else {
                     alert('Formato de imagen incorrecto imagen 1.');
@@ -362,8 +363,7 @@ function im2(){
             processData: false,
             success: function(response) {
                 if (response != 0) {
-                   // $(".card-img-top").attr("src", response);
-                    alert('Imagen 2 correcta ');
+                  
 im3();
                 } else {
                     alert('Formato de imagen incorrecto imagen 2.');
@@ -384,8 +384,7 @@ function im3(){
             processData: false,
             success: function(response) {
                 if (response != 0) {
-                   // $(".card-img-top").attr("src", response);
-                     alert('Imagen 3 correcta ');
+
                     im4();
                 } else {
                     alert('Formato de imagen incorrecto imagen 3.');
@@ -407,7 +406,6 @@ function im3(){
             success: function(response) {
                 if (response != 0) {
                   
-                    alert('Imagen 4 correcta ');
                 } else {
                     alert('Formato de imagen incorrecto imagen 4.');
                 }
@@ -428,9 +426,8 @@ function im3(){
             type: "POST",
             url: "logout.php",
             data: parametros, beforeSend: function(){
-                          //imagen de carga
-                  
-                          $('#resultado').fadeIn(1000).html("<p align='center'><img src='im/log.gif' /></p>");
+
+                          $('#form1').fadeIn(1000).html("<p align='center'><img src='im/log.gif' /></p>");
                     },timeout:200000,
             success: function(response) {            
                if (response =="cerrar") {
