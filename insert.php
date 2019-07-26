@@ -21,7 +21,7 @@ $query="INSERT INTO inmueble(codigo_db, metraje_db, zona_db, ndorm_db, n_ban_db,
 
 if(mysqli_query($con,$query)){
 
-      echo "corecto ";
+      echo "corecto";
 } else{
     echo "ERROR: Could not able to execute sql. ". mysqli_error($con);
 }
