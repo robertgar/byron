@@ -125,7 +125,7 @@ footer{
   <a href="bodeg.php">Bodegas</a>
   <a href="terre.php">Terrenos</a>
   <a href="contacto.php">Contacto</a>
-  <a href="login.php" style="float:right">Inciar sesion</a>
+  <a href="" onclick=" window.open('login.php');" style="float:right">Inciar sesion</a>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
   </a>
