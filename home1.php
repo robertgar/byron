@@ -50,9 +50,14 @@ ul.topnav li.right {float: right;}
   ul.topnav li.right, 
   ul.topnav li {float: none;}
 }
- img{
+ .timg{
         width: 60px; height: 60px;
       }
+#carga{
+   display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 </style>
 </head>
 <body>
@@ -64,7 +69,7 @@ ul.topnav li.right {float: right;}
  
 </ul>
 <br><br><br>
-<div style="padding:0 16px;">
+<div style="padding:0 16px;" id="resultado1">
  <table class="table ">
   <thead class="thead-dark">
     <tr>
@@ -93,7 +98,7 @@ echo "<br />". "No hay datos." . "<br />";
       <th scope="row"><?php echo $row["codigo_db"];?></th>
       <td><?php echo $row["a"];?></td>
       <td><?php echo $row["metraje_db"]; ?></td>
-      <td><img src="<?php echo "im/".$row["im1"]; ?>">&nbsp&nbsp<img src="<?php echo "im/".$row["im2"]; ?>">&nbsp&nbsp<img src="<?php echo "im/".$row["im3"]; ?>">&nbsp&nbsp<img src="<?php echo "im/".$row["im4"]; ?>"></td>
+      <td><img src="<?php echo "im/".$row["im1"]; ?>" class="timg">&nbsp&nbsp<img src="<?php echo "im/".$row["im2"]; ?>" class="timg">&nbsp&nbsp<img src="<?php echo "im/".$row["im3"]; ?>" class="timg">&nbsp&nbsp<img src="<?php echo "im/".$row["im4"]; ?>" class="timg"></td>
       <td><?php echo $row["b"]; ?></td>
 
       <td>
@@ -128,6 +133,12 @@ echo "<br />". "No hay datos." . "<br />";
             type: "POST",
             url: "delete.php",
             data: parametros,
+            beforeSend: function(){
+                          //imagen de carga
+                  
+                          $("#" + x ).fadeIn(1000).html("<img src='im/log.gif' class='timg'/>");
+
+                    },timeout:200000,
             success: function(response) {            
                if (response != 0) {
                     alert('Eliminado ');
@@ -146,8 +157,8 @@ echo "<br />". "No hay datos." . "<br />";
 <script>
 $(document).ready(function () {
     $('table').paginate({
-        'elemsPerPage': 5,
-            'maxButtons': 6
+        'elemsPerPage': 15,
+            'maxButtons': 16
     });
 });
 </script>
@@ -160,9 +171,9 @@ $(document).ready(function () {
             url: "logout.php",
             data: parametros, beforeSend: function(){
                           //imagen de carga
-                  
-                          $('#resultado').fadeIn(1000).html("<p align='center'><img src='im/log.gif' /></p>");
-                    },timeout:200000,
+             $("#resultado1" ).fadeIn(90000).html("<img src='im/log.gif' id='carga'/>");
+
+                    },timeout:9000000,
             success: function(response) {            
                if (response =="cerrar") {
                   window.location = 'login.php'; 
@@ -174,3 +185,4 @@ $(document).ready(function () {
 
     }
 </script>
+
