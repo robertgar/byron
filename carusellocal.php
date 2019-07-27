@@ -28,7 +28,7 @@ $i++;
     </div>
   </div>
 </div>
-<div id="demo" class="carousel slide" data-ride="carousel">
+<div id="demo3" class="carousel slide" data-ride="carousel">
 
   <!-- Indicators -->
   <ul class="carousel-indicators">
