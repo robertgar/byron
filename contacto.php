@@ -10,7 +10,16 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>      
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <style type="text/css">
-
+footer{
+  min-height: 70px;
+  width: 100%;
+  position: absolute;
+  clear: both;
+  margin-top: 0px;
+  padding-top: 0px;
+  overflow: visible;
+  top:93%;
+}
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -119,10 +128,13 @@ background-color: #050505;
             </dl>
     </div>
     <div class="col-sm-4">
-  
-      
-        
-          
+  <h1>Sigueme en las redes sociales:</h1>
+
+      <i onclick=" window.open('https://twitter.com/');" class="fa fa-twitter-square" style="font-size:48px;color:#00D2FF"></i>
+&nbsp&nbsp
+        <i class="fa fa-whatsapp" style="font-size:48px;color:#00FF00"></i>
+        &nbsp&nbsp
+          <i onclick=" window.open('https://www.facebook.com/');"class="fa fa-facebook-square" style="font-size:48px;color:#1908FF"></i>
            
         </div>
       </div>
@@ -142,9 +154,14 @@ function myFunction() {
 }
 
 </script>
-<footer class="container-fluid bg-4 text-center">
-  <p>© 2019 Copy Right</p>
+ 
+
+
+<footer class="footer">
+    <div class="container bg-4 text-center">
+        <p>© 2019 Copy Right</p>
         <p>Website indelsur.com by <a href="http://www.indelsur.operaciones@gmail.com/" target="_blank" rel="nofollow" class="link">www.gualipramos@gmail.com</a></p>
-</footer>  
+    </div>
+</footer>
 </body>
-</html>
+</htm
