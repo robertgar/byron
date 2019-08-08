@@ -192,7 +192,7 @@ echo "<br />". "No hay datos." . "<br />";
 <div class="container">
   <div class="row">
     <div class="col-sm-6 box" >
-     <img  class="im"src="<?php echo "im/".$row["im1"]; ?>">
+       <a  class="fancybox-thumbs" data-fancybox-group="thumb" href="<?php echo "im/".$row["im1"]; ?>"><i href="<?php echo "im/".$row["im1"]; ?>"><img  class="im" src="<?php echo "im/".$row["im1"]; ?>"></i></a>
     </div>
     <div class="col-sm-6">
        <div class="row">
@@ -305,7 +305,7 @@ function myFunction() {
 
       $("#fancybox-manual-c").click(function() {
         $.fancybox.open([
-          {
+            {
             href : '<?php echo "im/".$row["im2"]; ?>',
             title : 'My title'
           }, {
@@ -313,6 +313,8 @@ function myFunction() {
             title : '2nd title'
           }, {
             href : '<?php echo "im/".$row["im4"]; ?>'
+          }, {
+            href : '<?php echo "im/".$row["im1"]; ?>'
           }
         ], {
           helpers : {
