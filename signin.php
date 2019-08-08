@@ -12,7 +12,7 @@ require_once 'conexion.php';
 		while($row1 = mysqli_fetch_array($query))
  {
  	session_start();
- 	$_SESSION["use"] = $row1["id"];
+ 	$_SESSION["use"] = $row1["usuariotbl"];
  }
 		echo "success";
 		
