@@ -93,11 +93,22 @@ background-color: #050505;
 #bt{
    border-radius: 30px;
 }
+img{
+  width: 50px;
+  height: 50px;
+}
+
+.im{
+  background-image: url("im/logo.jpeg"); 
+   width: 60px;
+  height: 60px;
+}
 </style>
 </head>
 <body>
 
 <div class="topnav" id="myTopnav">
+  <a class="im"><img src="im/logo.jpeg"></a>
   <a href="index.php">Inicio</a>
   <a href="quienes.php">Quienes Somos</a>
   <a href="apart.php">Apartamentos</a>
@@ -130,19 +141,16 @@ background-color: #050505;
     <div class="col-sm-4">
   <h1>Sigueme en las redes sociales:</h1>
 
+
       <i onclick=" window.open('https://twitter.com/');" class="fa fa-twitter-square" style="font-size:48px;color:#00D2FF"></i>
 &nbsp&nbsp
-        <i class="fa fa-whatsapp" style="font-size:48px;color:#00FF00"></i>
+        <i onclick=" window.open('https://wa.me/502%2051173235');" class="fa fa-whatsapp" style="font-size:48px;color:#00FF00"></i>
         &nbsp&nbsp
           <i onclick=" window.open('https://www.facebook.com/');"class="fa fa-facebook-square" style="font-size:48px;color:#1908FF"></i>
-           
+         
         </div>
       </div>
     </div>
- 
-
-
- 
 <script>
 function myFunction() {
   var x = document.getElementById("myTopnav");
