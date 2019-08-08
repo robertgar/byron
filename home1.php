@@ -63,7 +63,7 @@ ul.topnav li.right {float: right;}
 <body>
 
 <ul class="topnav">
-  <li><a class="active" href="">Bienvenido <?php echo $_SESSION['use']; ?></a></li>
+  <li><a class="active" href="#home">Bienvenido <?php echo $_SESSION['use']; ?></a></li>
   <li><a href="resgist.php">Registar</a></li>
   <li class="right"><a onclick="logut()">Cerrar Sesion</a></li>
  
@@ -105,9 +105,9 @@ echo "<br />". "No hay datos." . "<br />";
 
         <a class="btn btn-danger" onclick="myFunction(<?php echo $row["id_in"];?>)"><span class="glyphicon glyphicon-trash"></span></a>
 
-        <button type="button" class="btn btn-default">
-          <span class="glyphicon glyphicon-edit"></span> Edit
-        </button></td>
+
+        <a class="btn btn-default" href="actua.php?id=<?php echo $row["id_in"];?>"><span class="glyphicon glyphicon-edit"></span></a>
+        </td>
     </tr>
 <?php
 }
