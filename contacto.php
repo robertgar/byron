@@ -144,7 +144,7 @@ img{
 
       <i onclick=" window.open('https://twitter.com/');" class="fa fa-twitter-square" style="font-size:48px;color:#00D2FF"></i>
 &nbsp&nbsp
-        <i onclick=" window.open('https://wa.me/502%2051173235');" class="fa fa-whatsapp" style="font-size:48px;color:#00FF00"></i>
+        <i onclick=" window.open('https://api.whatsapp.com/send?phone=50251173235');" class="fa fa-whatsapp" style="font-size:48px;color:#00FF00"></i>
         &nbsp&nbsp
           <i onclick=" window.open('https://www.facebook.com/');"class="fa fa-facebook-square" style="font-size:48px;color:#1908FF"></i>
          
