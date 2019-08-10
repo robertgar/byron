@@ -165,7 +165,7 @@ footer{
    <a href="index.php">Inicio</a>
   <a href="quienes.php">Quienes Somos</a>
     <a href="apart.php">Apartamentos</a>
-  <a href="casa.php" class="active">Casas</a>
+  <a href="casa.php">Casas</a>
     <a href="local.php">Locales comerciales</a>
   <a href="bodeg.php">Bodegas</a>
   <a href="terre.php">Terrenos</a>
