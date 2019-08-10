@@ -133,8 +133,8 @@ img{
      <h2 class="p3">Contactos</h2>
             <dl>
                 <dt class="color-1 p2"><strong>Dirección: 7ª. Calle prolongación 1-57 zona 02 Mazatenango,<br>Suchitepequez.</strong></dt>
-                <dd><span>Telefono:</span>+502 7872-2126</dd>
-                <dd><span>Fax:</span>+502 7872-3581</dd>
+                <dd><span>Telefono:</span>+502 7872-2126 +502 7872-3581</dd>
+                
                 <dd><span>E-mail:</span><a href="#" class="link">indelsur.admon@gmail.com</a></dd>
             </dl>
     </div>
