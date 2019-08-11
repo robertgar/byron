@@ -5,7 +5,7 @@
 if(isset($_SESSION['use']))    
                              
  {
-    header("Location:Mostrar.php"); 
+    header("Location:home1.php"); 
  }
 ?>
 <!DOCTYPE html>
