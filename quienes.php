@@ -4,6 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>Inmuebles</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -11,6 +12,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   
 <style type="text/css">
+
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -78,11 +80,22 @@ footer{
 .par{ 
   font-size: 30px;
 }
+#m1{
+  width: 50px;
+  height: 50px;
+}
+
+.im{
+  background-image: url("im/logo.jpeg"); 
+   width: 60px;
+  height: 60px;
+}
 </style>
 </head>
 <body>
 
 <div class="topnav" id="myTopnav">
+  <a class="im"><img src="im/logo.jpeg" id="m1"></a>
   <a href="index.php">Incio</a>
   <a href="quienes.php"  class="active">Quienes Somos</a>
   <a href="apart.php">Apartamentos</a>
