@@ -11,6 +11,13 @@
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <style>
+    .error{
+  border: 1.5px solid red;
+}
+
+.correcto {
+  border: 1.5px solid green;
+}
 body {margin: 0;}
 
 ul.topnav {
@@ -92,12 +99,12 @@ border-style: dashed;
                                     
                             <div style="margin-bottom: 25px" >
                                         <label class="input-group">Codigo</label>
-                                        <input  type="text" class="redondeado form-control" name="cod" placeholder="Codigo">    
+                                        <input  type="text" class="redondeado form-control" name="cod" placeholder="Codigo" id="cod1">    
                                 </div>
                                 
                                 <div style="margin-bottom: 25px" >
                                         <label class="input-group">Tipo Inmueble</label>
-                                        <select class="redondeado form-control" id="tip" name="tp" onchange="capturar()">
+                                        <select class="redondeado form-control" id="tip1" name="tp" onchange="capturar()">
                                           <option value="1">Apartamento</option>
                                           <option value="2">Casa</option>
                                           <option value="3">Locales Comerciales</option>
@@ -107,36 +114,36 @@ border-style: dashed;
                                 </div>
                                 <div style="margin-bottom: 25px" >
                                         <label class="input-group">Metraje</label>
-                                        <input  type="text" class=" redondeado form-control" name="met" value="" placeholder="Metraje">    
+                                        <input  type="text" class=" redondeado form-control" name="met" placeholder="Metraje" id="met1">    
                                 </div>
                                   <div style="margin-bottom: 25px" >
                                         <label class="input-group">Ubicacion</label>
-                                     <input type="text" name="ub" class=" redondeado form-control">  
+                                     <input type="text" name="ub" class=" redondeado form-control" id="ub1">  
                                          </div> 
                                 <div id="c1">
                                     <div style="margin-bottom: 25px" >
                                <label class="input-group">No. Dormitorio</label>
-                                       <input type="text" name="dor" class=" redondeado form-control"> 
+                                       <input type="text" name="dor" class=" redondeado form-control" id="dor1"> 
                                 
                                 </div> 
                               
                            
                                 <div style="margin-bottom: 25px" >
                                         <label class="input-group">No. Baños</label>
-                                     <input type="text" name="ban" class="redondeado form-control">  
+                                     <input type="text" name="ban" class="redondeado form-control" id="ban1">  
                                 </div>
                                
 
                                 <div style="margin-bottom: 25px" >
                                         <label class="input-group">Parqueo</label>
-                                     <input type="text" name="par" class="redondeado form-control"> 
+                                     <input type="text" name="par" class="redondeado form-control" id="par1"> 
                                          </div>  
 
                                           </div>  
 
                                  <div style="margin-bottom: 25px" >
                                         <label class="input-group">Estado</label>
-                                      <select class="redondeado form-control" id="Estado" name="Estado">
+                                      <select class="redondeado form-control" id="Estado1" name="Estado">
                                           <option value="1">Disponible</option>
                                           <option value="2">En Proceso</option>
                                           <option value="3">Apartamento</option>
@@ -144,7 +151,7 @@ border-style: dashed;
                                 </div>
                                 <div style="margin-bottom: 25px" >
                                         <label class="input-group">Descripcion</label>
-                                        <textarea name="desc" class="redondeado form-control"></textarea>
+                                        <textarea name="desc" class="redondeado form-control" id="desc1"></textarea>
                                        
                                 </div>
 
@@ -184,6 +191,7 @@ border-style: dashed;
                                     <!-- Button -->
 
                                     <div class="col-sm-12 controls">
+                                   
                                    
                                     <input type="button" class="redondeado btn btn-info btn-lg btn-block upload" value="Guardar">
                                     
@@ -267,10 +275,48 @@ document.getElementById("image4").onchange = function(e) {
   };
   reader.readAsDataURL(e.target.files[0]);
 }
+
+
  $(document).ready(function() {
     $(".upload").on('click', function() {
+  var po=document.getElementsByName("cod")[0].value;
+  var p2=document.getElementsByName("met")[0].value;
+  var p3=document.getElementsByName("dor")[0].value;
+  var p4=document.getElementsByName("ub")[0].value;
+  var p5=document.getElementsByName("par")[0].value;
+  var p7=document.getElementsByName("desc")[0].value;
+  var p8=document.getElementsByName("ban")[0].value;
+ var x1 = document.getElementsByName("image").value;
+  var x2 = document.getElementsByName("image2").value;
+  var x3 = document.getElementsByName("image3").value;
+  var x4 = document.getElementsByName("image4").value;
+  
+   if (po == ''|p2 == ''| p3 == ''| p4 == ''| p5 == ''| p7 == '' |p8 == ''|x1 == ''| x2 == ''| x3 == '' | x4 == '') {
+    var ids = ["cod1","met1","dor1","ub1","par1","desc1","ban1","image","image2","image3","image4"];
+var i;
+for (i = 0; i < 11; i++) {
+  if(ids.hasOwnProperty(i)){
+    id = ids[i];
+    //Si no hay input, no lo podemos validar
+   if($("#"+id).val().length < 1){
+$("#"+id).addClass("error");
+    }else{
+   $("#"+id).addClass("correcto");
+    }
+  }
+    
+}
+ alert("Varios campos vacios");
+  }else{
+   
 im1();
 guardar();
+       
+  }
+
+
+
+
     });
 });
 function guardar(){
