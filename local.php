@@ -8,6 +8,7 @@ ON inmueble.est_fk = tipo_estado.id_esta WHERE `tip_in_fk`=3";
 <!DOCTYPE html>
 <html>
 <head>
+  <title>Inmuebles</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -123,11 +124,22 @@ footer{
 h2, span{
   color: #FFFFFF;
 }
+#m1{
+  width: 50px;
+  height: 50px;
+}
+
+.im{
+  background-image: url("im/logo.jpeg"); 
+   width: 60px;
+  height: 60px;
+}
 </style>
 </head>
 <body>
 
 <div class="topnav" id="myTopnav">
+  <a class="im"><img src="im/logo.jpeg" id="m1"></a>
   <a href="index.php">Inicio</a>
   <a href="quienes.php">Quienes Somos</a>
     <a href="apart.php">Apartamentos</a>
