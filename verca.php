@@ -6,6 +6,7 @@ $sql_query = "SELECT * FROM inmueble WHERE id_in='".$cod."'";
 <!DOCTYPE html>
 <html>
 <head>
+           <title>Inmuebles</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -157,25 +158,19 @@ footer{
     -o-background-size: cover;
     background-size: cover;
     }
+#m11{
+  width: 50px;
+  height: 50px;
+}
+
+.im21{
+  background-image: url("im/logo.jpeg"); 
+   width: 60px;
+  height: 60px;
+}
 </style>
 </head>
 <body>
-
-<div class="topnav" id="myTopnav">
-   <a href="index.php">Inicio</a>
-  <a href="quienes.php">Quienes Somos</a>
-    <a href="apart.php">Apartamentos</a>
-  <a href="casa.php">Casas</a>
-    <a href="local.php">Locales comerciales</a>
-  <a href="bodeg.php">Bodegas</a>
-  <a href="terre.php">Terrenos</a>
-  <a href="contacto.php">Contacto</a>
-  <a href="" onclick=" window.open('login.php');"  style="float:right">Inciar sesion</a>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
-</div>
-<br><br><br>
    <?php
         if (mysqli_query($con,$sql_query)) {
   $result = mysqli_query($con,$sql_query);
@@ -187,7 +182,38 @@ echo "<br />". "No hay datos." . "<br />";
  } else{
  while($row = mysqli_fetch_array($result))
  {
+
+ 
         ?>
+<div class="topnav" id="myTopnav">
+  <a class="im21"><img src="im/logo.jpeg" id="m11"></a>
+   <a href="index.php">Inicio</a>
+  <a href="quienes.php">Quienes Somos</a>
+   <?php
+ if ($row["tip_in_fk"]=='1'){
+?>
+<a href="apart.php" class="active">Apartamentos</a>
+  <a href="casa.php" >Casas</a>
+
+<?php
+  }elseif ($row["tip_in_fk"]=='2') {
+    ?>
+ <a href="apart.php">Apartamentos</a>
+  <a href="casa.php" class="active">Casas</a>
+    <?php
+  }
+?>
+    <a href="local.php">Locales comerciales</a>
+  <a href="bodeg.php">Bodegas</a>
+  <a href="terre.php">Terrenos</a>
+  <a href="contacto.php">Contacto</a>
+  <a href="" onclick=" window.open('login.php');"  style="float:right">Inciar sesion</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+<br><br><br>
+
 <section id="content">
 <div class="container">
   <div class="row">
