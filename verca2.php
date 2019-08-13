@@ -6,7 +6,9 @@ $sql_query = "SELECT * FROM inmueble WHERE id_in='".$cod."'";
 <!DOCTYPE html>
 <html>
 <head>
-             <title>Inmuebles</title>
+               <title> Inmuebles</title> 
+        <!-- add icon link -->
+        <link rel = "icon" href ="im/logo.jpeg" type = "image/x-icon">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
