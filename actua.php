@@ -22,7 +22,7 @@ echo "<br />". "No hay datos." . "<br />";
 <!DOCTYPE html>
 <html>
 <head>
-   <title> Inmuebles</title> 
+     <title> Inmuebles</title> 
         <!-- add icon link -->
         <link rel = "icon" href ="im/logo.jpeg" type = "image/x-icon">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,6 +30,13 @@ echo "<br />". "No hay datos." . "<br />";
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <style>
+      .error{
+  border: 1.5px solid red;
+}
+
+.correcto {
+  border: 1.5px solid green;
+}
 body {margin: 0;}
 
 ul.topnav {
@@ -112,7 +119,8 @@ background: url('<?php echo "im/".$row["im1"]; ?>'); }
                 
                             <div style="margin-bottom: 25px" >
                                         <label class="input-group">Codigo</label>
-                                        <input  type="text" class="redondeado form-control" name="cod" placeholder="Codigo" value="<?php echo $row["codigo_db"];?>">    
+                                        <input  type="text" class="redondeado form-control" name="cod" placeholder="Codigo" id="cod1" value="<?php echo $row["codigo_db"];?>"> 
+                                        <div id="rcod1"></div>    
                                 </div>
                                 
                                 <div style="margin-bottom: 25px" >
@@ -127,29 +135,34 @@ background: url('<?php echo "im/".$row["im1"]; ?>'); }
                                 </div>
                                 <div style="margin-bottom: 25px" >
                                         <label class="input-group">Metraje</label>
-                                        <input  type="text" class=" redondeado form-control" name="met" placeholder="Metraje" value="<?php echo $row["metraje_db"];?>">    
+                                        <input  type="text" class=" redondeado form-control" name="met" placeholder="Metraje" id="met1" value="<?php echo $row["metraje_db"];?>"> 
+                                        <div id="rmet1"></div>    
                                 </div>
                                   <div style="margin-bottom: 25px" >
                                         <label class="input-group">Ubicacion</label>
-                                     <input type="text" name="ub" class=" redondeado form-control" value="<?php echo $row["zona_db"];?>">  
+                                     <input type="text" name="ub" class=" redondeado form-control" id="ub1" value="<?php echo $row["zona_db"];?>">  
+                                     <div id="rub1"></div> 
                                          </div> 
                                 <div id="c1">
                                     <div style="margin-bottom: 25px" >
                                <label class="input-group">No. Dormitorio</label>
-                                       <input type="text" name="dor" class=" redondeado form-control" value="<?php echo $row["ndorm_db"];?>"> 
-                                
+                                       <input type="text" name="dor" class=" redondeado form-control" id="dor1" value="<?php echo $row["ndorm_db"];?>"> 
+
+                                 <div id="rdor1"></div> 
                                 </div> 
                               
                            
                                 <div style="margin-bottom: 25px" >
                                         <label class="input-group">No. Baños</label>
-                                     <input type="text" name="ban" class="redondeado form-control" value="<?php echo $row["n_ban_db"];?>">  
+                                     <input type="text" name="ban" class="redondeado form-control" id="ban1" value="<?php echo $row["n_ban_db"];?>"> 
+                                    <div id="rban1"></div> 
                                 </div>
                                
 
                                 <div style="margin-bottom: 25px" >
                                         <label class="input-group">Parqueo</label>
-                                     <input type="text" name="par" class="redondeado form-control " value="<?php echo $row["n_par_db"];?>"> 
+                                     <input type="text" name="par" class="redondeado form-control " id="par1" value="<?php echo $row["n_par_db"];?>" > 
+                                     <div id="rpar1"></div>
                                          </div>  
 
                                           </div>  
@@ -164,8 +177,8 @@ background: url('<?php echo "im/".$row["im1"]; ?>'); }
                                 </div>
                                 <div style="margin-bottom: 25px" >
                                         <label class="input-group">Descripcion</label>
-                                        <textarea name="desc" class="redondeado form-control"><?php echo $row["derscri_db"];?></textarea >
-                                       
+                                        <textarea name="desc" class="redondeado form-control" id="desc1"><?php echo $row["derscri_db"];?></textarea >
+                                       <div id="rdesc1"></div>
                                 </div>
 
                                  <div style="margin-bottom: 25px" class="input-group">
@@ -211,7 +224,7 @@ background: url('<?php echo "im/".$row["im1"]; ?>'); }
                                     <div class="col-sm-12 controls">
                                    
                                     <input type="button" class="redondeado btn btn-info btn-lg btn-block upload" value="Actualizar" onclick="guardar(<?php echo $id;?>)">
-                                    
+                                   
                                     </div>
                                 </div>
 
@@ -302,17 +315,18 @@ document.getElementById("image4").onchange = function(e) {
 }
 
 function guardar(b){
-    var po=document.getElementsByName("cod")[0].value;
+  var ids = ["cod1","met1","dor1","ub1","par1","desc1","ban1"];
+ var po=document.getElementsByName("cod")[0].value;
   var p2=document.getElementsByName("met")[0].value;
   var p3=document.getElementsByName("dor")[0].value;
   var p4=document.getElementsByName("ub")[0].value;
   var p5=document.getElementsByName("par")[0].value;
   var p7=document.getElementsByName("desc")[0].value;
   var p8=document.getElementsByName("ban")[0].value;
+//var vv=$("#cod1").val().length;
 
-  
-   if (po == ''|p2 == ''| p3 == ''| p4 == ''| p5 == ''| p7 == '' |p8 == '') {
-    var ids = ["cod1","met1","dor1","ub1","par1","desc1","ban1"];
+ if (po == ''|p2 == ''| p3 == ''| p4 == ''| p5 == ''| p7 == '' |p8 == '') {
+    
 var i;
 for (i = 0; i < 7; i++) {
   if(ids.hasOwnProperty(i)){
@@ -320,14 +334,19 @@ for (i = 0; i < 7; i++) {
     //Si no hay input, no lo podemos validar
    if($("#"+id).val().length < 1){
 $("#"+id).addClass("error");
+var warning = $("<div class='alert alert-danger'><label>*Campo obligatorio</label></div>");
+ $('#r'+id).append(warning);
     }else{
    $("#"+id).addClass("correcto");
+ 
     }
   }
     
 }
  alert("Varios campos vacios");
-  }else{
+  
+} else {
+  
   var a;
  var a2;
  var a3;
@@ -411,11 +430,11 @@ im1();
       
       }
 })
-
-
-  }
-
 }
+}
+
+  
+
 
 
 function im1(){
