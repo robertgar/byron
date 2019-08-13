@@ -14,6 +14,9 @@ ON inmueble.est_fk = tipo_estado.id_esta";
 <!DOCTYPE html>
 <html>
 <head>
+   <title> Inmuebles</title> 
+        <!-- add icon link -->
+        <link rel = "icon" href ="im/logo.jpeg" type = "image/x-icon">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link href="jquery.paginate.css" rel="stylesheet" type="text/css">
