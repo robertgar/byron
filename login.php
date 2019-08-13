@@ -26,6 +26,19 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
+	* { box-sizing: border-box; padding:0; margin: 0; }
+
+body {
+	font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+ 
+  font-size:12px;
+  background:#333;
+}
+
+.container{
+	width:500px;
+
+}
 </style>
 <body>
 	
