@@ -22,6 +22,9 @@ echo "<br />". "No hay datos." . "<br />";
 <!DOCTYPE html>
 <html>
 <head>
+   <title> Inmuebles</title> 
+        <!-- add icon link -->
+        <link rel = "icon" href ="im/logo.jpeg" type = "image/x-icon">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
