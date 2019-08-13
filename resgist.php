@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <title> Inmuebles</title> 
+     <title> Inmuebles</title> 
         <!-- add icon link -->
         <link rel = "icon" href ="im/logo.jpeg" type = "image/x-icon">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -102,7 +102,8 @@ border-style: dashed;
                                     
                             <div style="margin-bottom: 25px" >
                                         <label class="input-group">Codigo</label>
-                                        <input  type="text" class="redondeado form-control" name="cod" placeholder="Codigo" id="cod1">    
+                                        <input  type="text" class="redondeado form-control" name="cod" placeholder="Codigo" id="cod1">   
+                                        <div id="rcod1"></div> 
                                 </div>
                                 
                                 <div style="margin-bottom: 25px" >
@@ -117,29 +118,33 @@ border-style: dashed;
                                 </div>
                                 <div style="margin-bottom: 25px" >
                                         <label class="input-group">Metraje</label>
-                                        <input  type="text" class=" redondeado form-control" name="met" placeholder="Metraje" id="met1">    
+                                        <input  type="text" class=" redondeado form-control" name="met" placeholder="Metraje" id="met1">  
+                                           <div id="rmet1"></div> 
                                 </div>
                                   <div style="margin-bottom: 25px" >
-                                        <label class="input-group">Ubicacion</label>
-                                     <input type="text" name="ub" class=" redondeado form-control" id="ub1">  
+                                        <label class="input-group">Ubicación</label>
+                                     <input type="text" name="ub" class=" redondeado form-control" id="ub1" placeholder="Ubicación">  
+                                     <div id="rub1"></div> 
                                          </div> 
                                 <div id="c1">
                                     <div style="margin-bottom: 25px" >
                                <label class="input-group">No. Dormitorio</label>
-                                       <input type="text" name="dor" class=" redondeado form-control" id="dor1"> 
-                                
+                                       <input type="text" name="dor" class=" redondeado form-control" id="dor1" placeholder="No. Dormitorio"> 
+                                <div id="rdor1"></div> 
                                 </div> 
                               
                            
                                 <div style="margin-bottom: 25px" >
                                         <label class="input-group">No. Baños</label>
-                                     <input type="text" name="ban" class="redondeado form-control" id="ban1">  
+                                     <input type="text" name="ban" class="redondeado form-control" id="ban1" placeholder="No. Baños">
+                                     <div id="rban1"></div>  
                                 </div>
                                
 
                                 <div style="margin-bottom: 25px" >
-                                        <label class="input-group">Parqueo</label>
-                                     <input type="text" name="par" class="redondeado form-control" id="par1"> 
+                                        <label class="input-group">No.Parqueo</label>
+                                     <input type="text" name="par" class="redondeado form-control" id="par1" placeholder="No.Parqueo">
+                                     <div id="rpar1"></div> 
                                          </div>  
 
                                           </div>  
@@ -153,8 +158,9 @@ border-style: dashed;
                                         </select> 
                                 </div>
                                 <div style="margin-bottom: 25px" >
-                                        <label class="input-group">Descripcion</label>
-                                        <textarea name="desc" class="redondeado form-control" id="desc1"></textarea>
+                                        <label class="input-group">Descripción</label>
+                                        <textarea name="desc" class="redondeado form-control" id="desc1" placeholder="Descripción"></textarea>
+                                        <div id="rdesc1"></div>
                                        
                                 </div>
 
@@ -163,7 +169,7 @@ border-style: dashed;
                         <div id="preview" class="previ"></div>
                             <br>
                             <input type="file" class="form-control-file" name="image" id="image" accept="image/x-png,image/gif,image/jpeg">
-                     
+                     <div id="rimage"></div>
                      </div>   
                                 </div>
                         <div style="margin-bottom: 25px" class="input-group">
@@ -171,6 +177,7 @@ border-style: dashed;
                                <div id="preview2" class="previ"></div>
                                                  <br>
                         <input type="file" class="form-control-file" name="image2" id="image2" accept="image/x-png,image/gif,image/jpeg"/>
+                        <div id="rimage2"></div>
                   </div>
                      </div>
                      <div style="margin-bottom: 25px" class="input-group">
@@ -178,6 +185,7 @@ border-style: dashed;
                                <div id="preview3" class="previ"></div>
                               <br>
                               <input type="file" class="form-control-file" name="image3" id="image3" accept="image/x-png,image/gif,image/jpeg" />
+                               <div id="rimage3"></div>
                   </div>
                      </div>
                      <div style="margin-bottom: 25px" class="input-group">
@@ -185,6 +193,7 @@ border-style: dashed;
                              <div id="preview4" class="previ"></div>
                             <br>
                             <input type="file" class="form-control-file" name="image4" id="image4" accept="image/x-png,image/gif,image/jpeg" />
+                            <div id="rimage4"></div>
                      </div>
                      </div>
                          
@@ -303,6 +312,8 @@ for (i = 0; i < 11; i++) {
     //Si no hay input, no lo podemos validar
    if($("#"+id).val().length < 1){
 $("#"+id).addClass("error");
+var warning = $("<div class='alert alert-danger'><label>*Campo obligatorio</label></div>");
+ $('#r'+id).append(warning);
     }else{
    $("#"+id).addClass("correcto");
     }
