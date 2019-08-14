@@ -152,9 +152,8 @@ border-style: dashed;
                                  <div style="margin-bottom: 25px" >
                                         <label class="input-group">Estado</label>
                                       <select class="redondeado form-control" id="Estado1" name="Estado">
-                                          <option value="1">Disponible</option>
-                                          <option value="2">En Proceso</option>
-                                          <option value="3">Apartamento</option>
+                                          <option value="2">Disponible</option>
+                                          <option value="1">En Proceso</option>
                                         </select> 
                                 </div>
                                 <div style="margin-bottom: 25px" >
