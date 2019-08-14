@@ -164,7 +164,7 @@ h2, span{
    $count = mysqli_num_rows($result);
 
  if ($count == 0) {
-echo "<div class='alert alert-danger'>Error: No hay datos</div>";
+echo "<div class='alert alert-danger'>En este momento no hay locales</div>";
 
  } else{
  while($row = mysqli_fetch_array($result))
