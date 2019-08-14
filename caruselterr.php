@@ -28,6 +28,33 @@ $i++;
     </div>
   </div>
 </div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+    <h1 >Terrenos</h1>
+    </div>
+    <div class="col-sm-6">
+      <button type="button" class="btn btn-primary" style="float:right" onClick="window.location.href='terre.php'">Ver Todos</button>
+    </div>
+  </div>
+</div>
+<?php
+require_once 'conexion.php';
+$sql_query = "SELECT id_in, im1,tip_in_fk FROM inmueble WHERE tip_in_fk=5 ORDER BY id_in DESC limit 12";
+if (mysqli_query($con,$sql_query)) {
+  $result = mysqli_query($con,$sql_query);
+  $i = 1;
+$count = mysqli_num_rows($result);
+ if ($count == 0) {
+echo "<div class='alert alert-danger'>En este momento no hay apartamentos</div>";
+ } else{
+ while($row = mysqli_fetch_array($result))
+ {
+$iim[$i]=$row['im1'];
+$icod[$i]=$row['id_in'];
+$i++;
+}
+?>
 <div id="demo" class="carousel slide" data-ride="carousel">
 
   <!-- Indicators -->
@@ -127,3 +154,10 @@ $i++;
    <span class="carousel-control-next-icon"></span>
   </a>
 </div>
+
+<?php
+}
+}else{
+  echo "error". mysqli_error($con);
+}
+    ?>  
