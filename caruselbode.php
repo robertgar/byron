@@ -4,7 +4,7 @@
     <h1 >Bodegas</h1>
     </div>
     <div class="col-sm-6">
-      <button type="button" class="btn btn-primary" style="float:right" onClick="window.location.href='casa.php'">Ver Todos</button>
+      <button type="button" class="btn btn-primary" style="float:right" onClick="window.location.href='bodeg.php'">Ver Todos</button>
     </div>
   </div>
 </div>
