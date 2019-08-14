@@ -1,33 +1,3 @@
-<?php
-
-require_once 'conexion.php';
-$sql_query = "SELECT id_in, im1,tip_in_fk FROM inmueble WHERE tip_in_fk=2 ORDER BY id_in DESC limit 12";
-if (mysqli_query($con,$sql_query)) {
-  $result = mysqli_query($con,$sql_query);
-  $i = 1;
- while($row = mysqli_fetch_array($result))
- {
-$iim[$i]=$row['im1'];
-$icod[$i]=$row['id_in'];
-$i++;
-}
- 
-
-}else{
-  echo "error";
-}
-    ?>  
-    
-  <div class="container">
-  <div class="row">
-    <div class="col-sm-6">
-    <h1 >Casas</h1>
-    </div>
-    <div class="col-sm-6">
-      <button type="button" class="btn btn-primary" style="float:right" onClick="window.location.href='casa.php'">Ver Todos</button>
-    </div>
-  </div>
-</div>
   <div class="container">
   <div class="row">
     <div class="col-sm-6">
