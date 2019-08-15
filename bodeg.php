@@ -184,7 +184,7 @@ echo "<div class='alert alert-danger'>En este momento no hay bodegas</div>";
     <button class="btn btn-success btn-lg btn-block redondeado" onClick="window.location.href='verca2.php?cod=<?php echo $row["id_in"]; ?>'">Ver</button>
     <br>
     <?php
-if (echo $row["b"]=="Disponible") {
+if ($row["b"]=="Disponible") {
   ?>
   <div class="alert alert-success redondeado">
   <strong><?php echo $row["b"]; ?>!</strong>
