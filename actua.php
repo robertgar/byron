@@ -122,28 +122,9 @@ background: url('<?php echo "im/".$row["im1"]; ?>'); }
                                         <input  type="text" class="redondeado form-control" name="cod" placeholder="Codigo" id="cod1" value="<?php echo $row["codigo_db"];?>"> 
                                         <div id="rcod1"></div>    
                                 </div>
-                                
-                                <div style="margin-bottom: 25px" >
-                                        <label class="input-group">Tipo Inmueble</label>
-                                        <select class="redondeado form-control" id="tip" name="tp" onchange="capturar()">
-                                          <option value="1">Apartamento</option>
-                                          <option value="2">Casa</option>
-                                          <option value="3">Locales Comerciales</option>
-                                          <option value="4">Bodega</option>
-                                          <option value="5">Terreno</option>
-                                        </select>    
-                                </div>
-                                <div style="margin-bottom: 25px" >
-                                        <label class="input-group">Metraje</label>
-                                        <input  type="text" class=" redondeado form-control" name="met" placeholder="Metraje" id="met1" value="<?php echo $row["metraje_db"];?>"> 
-                                        <div id="rmet1"></div>    
-                                </div>
-                                  <div style="margin-bottom: 25px" >
-                                        <label class="input-group">Ubicacion</label>
-                                     <input type="text" name="ub" class=" redondeado form-control" id="ub1" value="<?php echo $row["zona_db"];?>">  
-                                     <div id="rub1"></div> 
-                                         </div> 
-                                <div id="c1">
+
+
+                                    <div id="c1">
                                     <div style="margin-bottom: 25px" >
                                <label class="input-group">No. Dormitorio</label>
                                        <input type="text" name="dor" class=" redondeado form-control" id="dor1" value="<?php echo $row["ndorm_db"];?>"> 
@@ -164,15 +145,103 @@ background: url('<?php echo "im/".$row["im1"]; ?>'); }
                                      <input type="text" name="par" class="redondeado form-control " id="par1" value="<?php echo $row["n_par_db"];?>" > 
                                      <div id="rpar1"></div>
                                          </div>  
+                                          </div>
 
-                                          </div>  
+                                <div style="margin-bottom: 25px" >
+                                        <label class="input-group">Tipo Inmueble</label>
+                                        <select class="redondeado form-control" id="tip1" name="tp" onchange="capturar()">
+                                         <?php
+if($row["tip_in_fk"]=="5"){
+?>
+<option value="5">Terreno</option>
+<option value="1">Apartamento</option>
+<option value="2">Casa</option>
+<option value="3">Locales Comerciales</option>
+<option value="4">Bodega</option>
+<script>
+ document.getElementById('c1').style.display = 'none';
+</script>
+  <?php
+}elseif ($row["tip_in_fk"]=="4") {
+  ?>
+<option value="4">Bodega</option>
+<option value="1">Apartamento</option>
+<option value="2">Casa</option>
+<option value="3">Locales Comerciales</option>
+<option value="5">Terreno</option>
+<script>
+ document.getElementById('c1').style.display = 'none';
+</script>
+<?php
+}elseif ($row["tip_in_fk"]=="3") {
+  ?>
+<option value="3">Locales Comerciales</option>
+<option value="1">Apartamento</option>
+<option value="2">Casa</option>
+<option value="4">Bodega</option>
+<option value="5">Terreno</option>
+<script>
+ document.getElementById('c1').style.display = 'none';
+</script>
+<?php
+}elseif ($row["tip_in_fk"]=="1") {
+  ?>
+<option value="1">Apartamento</option>
+<option value="2">Casa</option>
+<option value="3">Locales Comerciales</option>
+<option value="4">Bodega</option>
+<option value="5">Terreno</option>
+<script>
+ document.getElementById('c1').style.display = 'inline';
+</script>
+<?php 
+}else{
+?>
+<option value="2">Casa</option>
+<option value="1">Apartamento</option>
+<option value="3">Locales Comerciales</option>
+<option value="4">Bodega</option>
+<option value="5">Terreno</option>
+<script>
+ document.getElementById('c1').style.display = 'inline';
+</script>
+<?php
+}
+?>
+                                        </select>    
+                                </div>
+                                <div style="margin-bottom: 25px" >
+                                        <label class="input-group">Metraje</label>
+                                        <input  type="text" class=" redondeado form-control" name="met" placeholder="Metraje" id="met1" value="<?php echo $row["metraje_db"];?>"> 
+                                        <div id="rmet1"></div>    
+                                </div>
+                                  <div style="margin-bottom: 25px" >
+                                        <label class="input-group">Ubicacion</label>
+                                     <input type="text" name="ub" class=" redondeado form-control" id="ub1" value="<?php echo $row["zona_db"];?>">  
+                                     <div id="rub1"></div> 
+                                         </div> 
+
+
+                              
+
+
 
                                  <div style="margin-bottom: 25px" >
                                         <label class="input-group">Estado</label>
                                       <select class="redondeado form-control" id="Estado" name="Estado">
-                                          <option value="1">Disponible</option>
-                                          <option value="2">En Proceso</option>
-                                          <option value="3">Apartamento</option>
+                                        <?php
+if($row["est_fk"]=="2"){
+?>
+ <option value="2">Disponible</option>
+<option value="1">En Proceso</option>
+  <?php
+}else{
+  ?>
+ <option value="1">En Proceso</option>
+<option value="2">Disponible</option>
+   <?php
+}
+  ?>
                                         </select> 
                                 </div>
                                 <div style="margin-bottom: 25px" >
@@ -253,12 +322,15 @@ background: url('<?php echo "im/".$row["im1"]; ?>'); }
   function capturar()
     {
 
-var combo = document.getElementById("tip");
+var combo = document.getElementById("tip1");
 var selected = combo.options[combo.selectedIndex].text;
+
 if(selected=='Terreno'){
     document.getElementById('c1').style.display = 'none';
 
     }else if(selected=='Bodega'){
+         document.getElementById('c1').style.display = 'none';
+       }else if(selected=='Locales Comerciales'){
          document.getElementById('c1').style.display = 'none';
 
 }else{
@@ -315,7 +387,361 @@ document.getElementById("image4").onchange = function(e) {
 }
 
 function guardar(b){
-  var ids = ["cod1","met1","dor1","ub1","par1","desc1","ban1"];
+  var combo = document.getElementById("tip1");
+var selected = combo.options[combo.selectedIndex].text;
+
+if(selected=='Terreno'){
+     
+  var ids = ["cod1","met1","ub1","desc1"];
+ var po=document.getElementsByName("cod")[0].value;
+  var p2=document.getElementsByName("met")[0].value;
+  var p4=document.getElementsByName("ub")[0].value;
+  var p7=document.getElementsByName("desc")[0].value;
+
+//var vv=$("#cod1").val().length;
+
+ if (po == ''|p2 == ''| p4 == ''| p7 == '' ) {
+    
+var i;
+for (i = 0; i < 4; i++) {
+  if(ids.hasOwnProperty(i)){
+    id = ids[i];
+    //Si no hay input, no lo podemos validar
+   if($("#"+id).val().length < 1){
+$("#"+id).addClass("error");
+var warning = $("<div class='alert alert-danger'><label>*Campo obligatorio</label></div>");
+ $('#r'+id).append(warning);
+    }else{
+   $("#"+id).addClass("correcto");
+ 
+    }
+  }
+    
+}
+ alert("Varios campos vacios");
+  
+} else {
+  
+  var a;
+ var a2;
+ var a3;
+ var a4;
+   var po=document.getElementsByName("cod")[0].value;
+  var p1=document.getElementsByName("tp")[0].value;
+  var p2=document.getElementsByName("met")[0].value;
+  var p3=document.getElementsByName("dor")[0].value;
+  var p4=document.getElementsByName("ub")[0].value;
+  var p5=document.getElementsByName("par")[0].value;
+  var p6=document.getElementsByName("Estado")[0].value;
+  var p7=document.getElementsByName("desc")[0].value;
+  var p8=document.getElementsByName("ban")[0].value;
+   var x1 = document.getElementById("image").value;
+   var x2 = document.getElementById("image2").value;
+   var x3 = document.getElementById("image3").value;
+   var x4 = document.getElementById("image4").value;
+  
+
+
+
+  if(x1==''){
+    var ruta = document.m1.src;
+ a1 = ruta.split('\\').pop().split('/').pop();
+   }else{
+   a1 = x1.split('\\').pop().split('/').pop();
+   }
+if(x2==''){
+    var ruta = document.m2.src;
+ a2 = ruta.split('\\').pop().split('/').pop();
+   }else{
+   a2 = x2.split('\\').pop().split('/').pop();
+   }
+   if(x3==''){
+    var ruta = document.m3.src;
+ a3 = ruta.split('\\').pop().split('/').pop();
+   }else{
+   a3 = x3.split('\\').pop().split('/').pop();
+   }
+
+   if(x4==''){
+    var ruta = document.m4.src;
+ a4 = ruta.split('\\').pop().split('/').pop();
+   }else{
+   a4 = x4.split('\\').pop().split('/').pop();
+   }
+im1();
+
+
+     var parametros = {
+      "varlor":b,
+ "cod" : po,
+                "tp" : p1,
+                 "met" : p2,
+                "dor" : p3,
+                 "ub" : p4,
+                "par" : p5,
+                 "Estado" : p6,
+                "desc" : p7,
+                 "ban" : p8,
+                "im" : a1,
+                 "im2" : a2,
+                "im3" : a3,
+                 "im4" : a4
+        };
+
+   $.ajax({
+  type: 'POST',
+        url: 'edit.php',
+        data:parametros,
+        beforeSend: function () {
+            console.log("Déjame pensar un poco...");
+        },
+        success: function(data){
+          if(data === "corecto"){
+     alert('Actualizado');
+     window.location="home1.php";
+          }else {
+            alert("error")
+          }
+      
+      }
+})
+}
+
+    }else if(selected=='Bodega'){
+          
+  var ids = ["cod1","met1","ub1","desc1"];
+ var po=document.getElementsByName("cod")[0].value;
+  var p2=document.getElementsByName("met")[0].value;
+  var p4=document.getElementsByName("ub")[0].value;
+  var p7=document.getElementsByName("desc")[0].value;
+
+//var vv=$("#cod1").val().length;
+
+ if (po == ''|p2 == ''| p4 == ''| p7 == '' ) {
+    
+var i;
+for (i = 0; i < 4; i++) {
+  if(ids.hasOwnProperty(i)){
+    id = ids[i];
+    //Si no hay input, no lo podemos validar
+   if($("#"+id).val().length < 1){
+$("#"+id).addClass("error");
+var warning = $("<div class='alert alert-danger'><label>*Campo obligatorio</label></div>");
+ $('#r'+id).append(warning);
+    }else{
+   $("#"+id).addClass("correcto");
+ 
+    }
+  }
+    
+}
+ alert("Varios campos vacios");
+  
+} else {
+  
+  var a;
+ var a2;
+ var a3;
+ var a4;
+   var po=document.getElementsByName("cod")[0].value;
+  var p1=document.getElementsByName("tp")[0].value;
+  var p2=document.getElementsByName("met")[0].value;
+  var p3=document.getElementsByName("dor")[0].value;
+  var p4=document.getElementsByName("ub")[0].value;
+  var p5=document.getElementsByName("par")[0].value;
+  var p6=document.getElementsByName("Estado")[0].value;
+  var p7=document.getElementsByName("desc")[0].value;
+  var p8=document.getElementsByName("ban")[0].value;
+   var x1 = document.getElementById("image").value;
+   var x2 = document.getElementById("image2").value;
+   var x3 = document.getElementById("image3").value;
+   var x4 = document.getElementById("image4").value;
+  
+
+
+
+  if(x1==''){
+    var ruta = document.m1.src;
+ a1 = ruta.split('\\').pop().split('/').pop();
+   }else{
+   a1 = x1.split('\\').pop().split('/').pop();
+   }
+if(x2==''){
+    var ruta = document.m2.src;
+ a2 = ruta.split('\\').pop().split('/').pop();
+   }else{
+   a2 = x2.split('\\').pop().split('/').pop();
+   }
+   if(x3==''){
+    var ruta = document.m3.src;
+ a3 = ruta.split('\\').pop().split('/').pop();
+   }else{
+   a3 = x3.split('\\').pop().split('/').pop();
+   }
+
+   if(x4==''){
+    var ruta = document.m4.src;
+ a4 = ruta.split('\\').pop().split('/').pop();
+   }else{
+   a4 = x4.split('\\').pop().split('/').pop();
+   }
+im1();
+
+
+     var parametros = {
+      "varlor":b,
+ "cod" : po,
+                "tp" : p1,
+                 "met" : p2,
+                "dor" : p3,
+                 "ub" : p4,
+                "par" : p5,
+                 "Estado" : p6,
+                "desc" : p7,
+                 "ban" : p8,
+                "im" : a1,
+                 "im2" : a2,
+                "im3" : a3,
+                 "im4" : a4
+        };
+
+   $.ajax({
+  type: 'POST',
+        url: 'edit.php',
+        data:parametros,
+        beforeSend: function () {
+            console.log("Déjame pensar un poco...");
+        },
+        success: function(data){
+          if(data === "corecto"){
+     alert('Actualizado');
+     window.location="home1.php";
+          }else {
+            alert("error")
+          }
+      
+      }
+})
+}
+       }else if(selected=='Locales Comerciales'){
+          
+  var ids = ["cod1","met1","ub1","desc1"];
+ var po=document.getElementsByName("cod")[0].value;
+  var p2=document.getElementsByName("met")[0].value;
+  var p4=document.getElementsByName("ub")[0].value;
+  var p7=document.getElementsByName("desc")[0].value;
+
+//var vv=$("#cod1").val().length;
+
+ if (po == ''|p2 == ''| p4 == ''| p7 == '' ) {
+    
+var i;
+for (i = 0; i < 4; i++) {
+  if(ids.hasOwnProperty(i)){
+    id = ids[i];
+    //Si no hay input, no lo podemos validar
+   if($("#"+id).val().length < 1){
+$("#"+id).addClass("error");
+var warning = $("<div class='alert alert-danger'><label>*Campo obligatorio</label></div>");
+ $('#r'+id).append(warning);
+    }else{
+   $("#"+id).addClass("correcto");
+ 
+    }
+  }
+    
+}
+ alert("Varios campos vacios");
+  
+} else {
+  
+  var a;
+ var a2;
+ var a3;
+ var a4;
+   var po=document.getElementsByName("cod")[0].value;
+  var p1=document.getElementsByName("tp")[0].value;
+  var p2=document.getElementsByName("met")[0].value;
+  var p3=document.getElementsByName("dor")[0].value;
+  var p4=document.getElementsByName("ub")[0].value;
+  var p5=document.getElementsByName("par")[0].value;
+  var p6=document.getElementsByName("Estado")[0].value;
+  var p7=document.getElementsByName("desc")[0].value;
+  var p8=document.getElementsByName("ban")[0].value;
+   var x1 = document.getElementById("image").value;
+   var x2 = document.getElementById("image2").value;
+   var x3 = document.getElementById("image3").value;
+   var x4 = document.getElementById("image4").value;
+  
+
+
+
+  if(x1==''){
+    var ruta = document.m1.src;
+ a1 = ruta.split('\\').pop().split('/').pop();
+   }else{
+   a1 = x1.split('\\').pop().split('/').pop();
+   }
+if(x2==''){
+    var ruta = document.m2.src;
+ a2 = ruta.split('\\').pop().split('/').pop();
+   }else{
+   a2 = x2.split('\\').pop().split('/').pop();
+   }
+   if(x3==''){
+    var ruta = document.m3.src;
+ a3 = ruta.split('\\').pop().split('/').pop();
+   }else{
+   a3 = x3.split('\\').pop().split('/').pop();
+   }
+
+   if(x4==''){
+    var ruta = document.m4.src;
+ a4 = ruta.split('\\').pop().split('/').pop();
+   }else{
+   a4 = x4.split('\\').pop().split('/').pop();
+   }
+im1();
+
+
+     var parametros = {
+      "varlor":b,
+ "cod" : po,
+                "tp" : p1,
+                 "met" : p2,
+                "dor" : p3,
+                 "ub" : p4,
+                "par" : p5,
+                 "Estado" : p6,
+                "desc" : p7,
+                 "ban" : p8,
+                "im" : a1,
+                 "im2" : a2,
+                "im3" : a3,
+                 "im4" : a4
+        };
+
+   $.ajax({
+  type: 'POST',
+        url: 'edit.php',
+        data:parametros,
+        beforeSend: function () {
+            console.log("Déjame pensar un poco...");
+        },
+        success: function(data){
+          if(data === "corecto"){
+     alert('Actualizado');
+     window.location="home1.php";
+          }else {
+            alert("error")
+          }
+      
+      }
+})
+}
+
+}else{
+     var ids = ["cod1","met1","dor1","ub1","par1","desc1","ban1"];
  var po=document.getElementsByName("cod")[0].value;
   var p2=document.getElementsByName("met")[0].value;
   var p3=document.getElementsByName("dor")[0].value;
@@ -430,6 +856,8 @@ im1();
       
       }
 })
+}
+
 }
 }
 
