@@ -233,6 +233,8 @@ if(selected=='Terreno'){
 
     }else if(selected=='Bodega'){
          document.getElementById('c1').style.display = 'none';
+}else if(selected=='Locales Comerciales'){
+         document.getElementById('c1').style.display = 'none';
 
 }else{
      document.getElementById('c1').style.display = 'inline';
