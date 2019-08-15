@@ -154,6 +154,7 @@ border-style: dashed;
                                       <select class="redondeado form-control" id="Estado1" name="Estado">
                                           <option value="2">Disponible</option>
                                           <option value="1">En Proceso</option>
+                                    
                                         </select> 
                                 </div>
                                 <div style="margin-bottom: 25px" >
@@ -226,14 +227,16 @@ border-style: dashed;
   function capturar()
     {
 
-var combo = document.getElementById("tip");
+var combo = document.getElementById("tip1");
 var selected = combo.options[combo.selectedIndex].text;
+
 if(selected=='Terreno'){
     document.getElementById('c1').style.display = 'none';
 
     }else if(selected=='Bodega'){
          document.getElementById('c1').style.display = 'none';
-
+       }else if(selected=='Locales Comerciales'){
+         document.getElementById('c1').style.display = 'none';
 
 }else{
      document.getElementById('c1').style.display = 'inline';
@@ -291,7 +294,114 @@ document.getElementById("image4").onchange = function(e) {
 
  $(document).ready(function() {
     $(".upload").on('click', function() {
-  var po=document.getElementsByName("cod")[0].value;
+var combo = document.getElementById("tip1");
+var selected = combo.options[combo.selectedIndex].text;
+
+if(selected=='Terreno'){
+     var po=document.getElementsByName("cod")[0].value;
+  var p2=document.getElementsByName("met")[0].value;
+  var p4=document.getElementsByName("ub")[0].value;
+  var p7=document.getElementsByName("desc")[0].value;
+ var x1 = document.getElementsByName("image").value;
+  var x2 = document.getElementsByName("image2").value;
+  var x3 = document.getElementsByName("image3").value;
+  var x4 = document.getElementsByName("image4").value;
+  
+   if (po == ''|p2 == ''| p4 == ''| p7 == '' |x1 == ''| x2 == ''| x3 == '' | x4 == '') {
+    var ids = ["cod1","met1","ub1","desc1","image","image2","image3","image4"];
+var i;
+for (i = 0; i < 8; i++) {
+  if(ids.hasOwnProperty(i)){
+    id = ids[i];
+    //Si no hay input, no lo podemos validar
+   if($("#"+id).val().length < 1){
+$("#"+id).addClass("error");
+var warning = $("<div class='alert alert-danger'><label>*Campo obligatorio</label></div>");
+ $('#r'+id).append(warning);
+    }else{
+   $("#"+id).addClass("correcto");
+    }
+  }
+    
+}
+ alert("Varios campos vacios");
+  }else{
+   
+im1();
+guardar();
+       
+  }
+    }else if(selected=='Bodega'){
+          var po=document.getElementsByName("cod")[0].value;
+  var p2=document.getElementsByName("met")[0].value;
+  var p4=document.getElementsByName("ub")[0].value;
+  var p7=document.getElementsByName("desc")[0].value;
+ var x1 = document.getElementsByName("image").value;
+  var x2 = document.getElementsByName("image2").value;
+  var x3 = document.getElementsByName("image3").value;
+  var x4 = document.getElementsByName("image4").value;
+  
+   if (po == ''|p2 == ''| p4 == ''| p7 == '' |x1 == ''| x2 == ''| x3 == '' | x4 == '') {
+    var ids = ["cod1","met1","ub1","desc1","image","image2","image3","image4"];
+var i;
+for (i = 0; i < 8; i++) {
+  if(ids.hasOwnProperty(i)){
+    id = ids[i];
+    //Si no hay input, no lo podemos validar
+   if($("#"+id).val().length < 1){
+$("#"+id).addClass("error");
+var warning = $("<div class='alert alert-danger'><label>*Campo obligatorio</label></div>");
+ $('#r'+id).append(warning);
+    }else{
+   $("#"+id).addClass("correcto");
+    }
+  }
+    
+}
+ alert("Varios campos vacios");
+  }else{
+   
+im1();
+guardar();
+       
+  }
+       }else if(selected=='Locales Comerciales'){
+          var po=document.getElementsByName("cod")[0].value;
+  var p2=document.getElementsByName("met")[0].value;
+  var p4=document.getElementsByName("ub")[0].value;
+  var p7=document.getElementsByName("desc")[0].value;
+ var x1 = document.getElementsByName("image").value;
+  var x2 = document.getElementsByName("image2").value;
+  var x3 = document.getElementsByName("image3").value;
+  var x4 = document.getElementsByName("image4").value;
+  
+   if (po == ''|p2 == ''| p4 == ''| p7 == '' |x1 == ''| x2 == ''| x3 == '' | x4 == '') {
+    var ids = ["cod1","met1","ub1","desc1","image","image2","image3","image4"];
+var i;
+for (i = 0; i < 8; i++) {
+  if(ids.hasOwnProperty(i)){
+    id = ids[i];
+    //Si no hay input, no lo podemos validar
+   if($("#"+id).val().length < 1){
+$("#"+id).addClass("error");
+var warning = $("<div class='alert alert-danger'><label>*Campo obligatorio</label></div>");
+ $('#r'+id).append(warning);
+    }else{
+   $("#"+id).addClass("correcto");
+    }
+  }
+    
+}
+ alert("Varios campos vacios");
+  }else{
+   
+im1();
+guardar();
+       
+  }
+
+}else{
+     var po=document.getElementsByName("cod")[0].value;
   var p2=document.getElementsByName("met")[0].value;
   var p3=document.getElementsByName("dor")[0].value;
   var p4=document.getElementsByName("ub")[0].value;
@@ -304,7 +414,7 @@ document.getElementById("image4").onchange = function(e) {
   var x4 = document.getElementsByName("image4").value;
   
    if (po == ''|p2 == ''| p3 == ''| p4 == ''| p5 == ''| p7 == '' |p8 == ''|x1 == ''| x2 == ''| x3 == '' | x4 == '') {
-    var ids = ["cod1","met1","dor1","ub1","par1","desc1","ban1","image","image2","image3","image4"];
+    var ids = ["cod1","met1","ub1","dor1","ban1","par1","desc1","image","image2","image3","image4"];
 var i;
 for (i = 0; i < 11; i++) {
   if(ids.hasOwnProperty(i)){
@@ -327,6 +437,14 @@ im1();
 guardar();
        
   }
+
+}
+
+
+
+
+
+
 
 
 
