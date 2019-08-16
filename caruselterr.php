@@ -16,7 +16,7 @@ if (mysqli_query($con,$sql_query)) {
   $i = 1;
 $count = mysqli_num_rows($result);
  if ($count == 0) {
-echo "<div class='alert alert-danger'>En este momento no hay apartamentos</div>";
+echo "<div class='alert alert-danger'>En este momento no hay terrenos</div>";
  } else{
  while($row = mysqli_fetch_array($result))
  {
