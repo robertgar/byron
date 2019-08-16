@@ -234,14 +234,25 @@ if($row["est_fk"]=="2"){
 ?>
  <option value="2">Disponible</option>
 <option value="1">En Proceso</option>
+  <option value="3">Ocupado</option>
   <?php
-}else{
+}elseif($row["est_fk"]=="1"){
   ?>
  <option value="1">En Proceso</option>
 <option value="2">Disponible</option>
+<option value="3">Ocupado</option>
    <?php
-}
+}else{
   ?>
+                                       <option value="3">Ocupado</option>   
+   <option value="1">En Proceso</option>
+<option value="2">Disponible</option>
+                                 
+                                       
+    <?php
+}
+  ?>                                     
+                                       
                                         </select> 
                                 </div>
                                 <div style="margin-bottom: 25px" >
