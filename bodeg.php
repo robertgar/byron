@@ -190,9 +190,15 @@ if ($row["b"]=="Disponible") {
   <strong><?php echo $row["b"]; ?>!</strong>
 </div>
   <?php
-} else {
+} else if ($row["b"]=="En Proceso") {
   ?>
   <div class="alert alert-warning redondeado">
+  <strong><?php echo $row["b"]; ?>!</strong>
+</div>
+   <?php
+} else {
+  ?>
+  <div class="alert alert-danger redondeado">
   <strong><?php echo $row["b"]; ?>!</strong>
 </div>
  <?php 
