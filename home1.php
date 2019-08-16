@@ -76,7 +76,7 @@ ul.topnav li.right {float: right;}
  <table class="table ">
   <thead class="thead-dark">
     <tr>
-      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
       <th scope="col">Tipo Inmueble</th>
       <th scope="col">Metraje</th>
       <th scope="col">Imagen</th>
