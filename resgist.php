@@ -154,6 +154,7 @@ border-style: dashed;
                                       <select class="redondeado form-control" id="Estado1" name="Estado">
                                           <option value="2">Disponible</option>
                                           <option value="1">En Proceso</option>
+                                       <option value="3">Ocupado</option>
                                     
                                         </select> 
                                 </div>
