@@ -118,8 +118,8 @@ background: url('<?php echo "im/".$row["im1"]; ?>'); }
                         <form  method="POST" id="form1">
                 
                             <div style="margin-bottom: 25px" >
-                                        <label class="input-group">Codigo</label>
-                                        <input  type="text" class="redondeado form-control" name="cod" placeholder="Codigo" id="cod1" value="<?php echo $row["codigo_db"];?>"> 
+                                        <label class="input-group">Nombre</label>
+                                        <input  type="text" class="redondeado form-control" name="cod" placeholder="Nombre" id="cod1" value="<?php echo $row["codigo_db"];?>"> 
                                         <div id="rcod1"></div>    
                                 </div>
 
