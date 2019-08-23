@@ -22,28 +22,34 @@ body {
 
 .topnav {
   overflow: hidden;
-  background-color: #050505;
+ /* background-color: #050505;*/
+ background-color: white;
 }
 
 .topnav a {
   float: left;
   display: block;
-  color: #ffffff;
+ /* color: #ffffff;*/
+ color: black;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+
 }
 
 .topnav a:hover {
   background-color: #2098f5;
-  color: black;
+color: black;
+
 }
 
 .topnav a.active {
   background-color: #2098f5;
-  color: white;
+ /* color: white;*/
+ color: black;
 }
+
 
 .topnav .icon {
   display: none;
