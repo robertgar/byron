@@ -106,18 +106,33 @@ img{
   width: 50px;
   height: 50px;
 }
-
-.im{
+.img-contenedor{
   background-image: url("im/logo.jpeg"); 
    width: 60px;
   height: 60px;
+    overflow:hidden;
 }
+.img-contenedor img {
+    -webkit-transition:all 1.9s ease; /* Safari y Chrome */
+    -moz-transition:all 1.9s ease; /* Firefox */
+    -o-transition:all 1.9s ease; /* IE 9 */
+    -ms-transition:all 1.9s ease; /* Opera */
+    width:100%;
+}
+.img-contenedor:hover img {
+    -webkit-transform:scale(1.5);
+    -moz-transform:scale(1.5);
+    -ms-transform:scale(1.5);
+    -o-transform:scale(1.5);
+    transform:scale(1.5);
+}
+img-contenedor
 </style>
 </head>
 <body>
 
 <div class="topnav" id="myTopnav">
-  <a class="im"><img src="im/logo.jpeg"></a>
+  <a class="img-contenedor"><img src="im/logo.jpeg"></a>
   <a href="index.php">Inicio</a>
   <a href="quienes.php">Quienes Somos</a>
   <a href="apart.php">Apartamentos</a>
