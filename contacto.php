@@ -171,7 +171,9 @@ img-contenedor
         <i onclick=" window.open('https://api.whatsapp.com/send?phone=50251173235');" class="fa fa-whatsapp" style="font-size:48px;color:#00FF00"></i>
         &nbsp&nbsp
           <i onclick=" window.open('https://www.facebook.com/');"class="fa fa-facebook-square" style="font-size:48px;color:#1908FF"></i>
-         
+         <div>
+             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15448.559047283408!2d-91.5079196!3d14.5339971!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb042e9854d0b4861!2sPinturas%20Volc%C3%A1n!5e0!3m2!1ses!2sgt!4v1568476181749!5m2!1ses!2sgt" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        </div>
         </div>
       </div>
     </div>
