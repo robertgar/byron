@@ -164,9 +164,12 @@ function myFunction() {
 }
 
 </script>
-<footer class="container-fluid bg-4 text-center">
-  <p>© 2019 Copy Right</p>
-        <p>Website indelsur.com by <a href="http://www.indelsur.operaciones@gmail.com/" target="_blank" rel="nofollow" class="link">www.gualipramos@gmail.com</a></p>
-</footer>  
+<footer class=" text-center">
+  <p>© 2019 Copyright</p>
+        <p> <a >
+          <span class="glyphicon glyphicon-envelope" style="font-size:20px"></span>
+        </a><a  target="_blank" rel="nofollow" class="link"  style="font-size:20px"></span>
+southsystems@outlook.es</a></p>
+</footer> 
 </body>
 </html>
