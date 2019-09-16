@@ -226,7 +226,7 @@ function myFunction() {
 </script>
 <footer class="container-fluid bg-4 text-center">
   <p>© 2019 Copyright</p>
-        <p> span class="glyphicon glyphicon-envelope"></span><a href="" target="_blank" rel="nofollow" class="link">
+        <p> <span class="glyphicon glyphicon-envelope"></span><a href="" target="_blank" rel="nofollow" class="link">
 southsystems@outlook.es</a></p>
 </footer>  
 </body>
