@@ -192,9 +192,11 @@ function myFunction() {
 
 <footer class="footer">
     <div class="container bg-4 text-center">
-        <p>© 2019 Copy Right</p>
-        <p>Website indelsur.com by <a href="http://www.indelsur.operaciones@gmail.com/" target="_blank" rel="nofollow" class="link">www.gualipramos@gmail.com</a></p>
-    </div>
+    
+  <p>© 2019 Copyright</p>
+        <p>
+southsystems@outlook.es</p>
+
 </footer>
 </body>
 </htm
