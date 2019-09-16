@@ -45,7 +45,7 @@ body {
  <div class="container">
          <div class="card" style="margin-top:10%">
             <div class="card-header">
-               Iniciar sesion
+               Iniciar sesión
             </div>
             <div class="card-body">
             <div id="preview_err" class="alert alert-danger" style="display:none" role="alert"></div>
