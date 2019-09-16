@@ -134,14 +134,14 @@ img-contenedor
 <div class="topnav" id="myTopnav">
   <a class="img-contenedor"><img src="im/logo.jpeg"></a>
   <a href="index.php">Inicio</a>
-  <a href="quienes.php">Quienes Somos</a>
+  <a href="quienes.php">Quiénes Somos</a>
   <a href="apart.php">Apartamentos</a>
   <a href="casa.php">Casas</a>
     <a href="local.php">Locales comerciales</a>
   <a href="bodeg.php">Bodegas</a>
   <a href="terre.php">Terrenos</a>
   <a href="contacto.php">Contacto</a>
- <a href="" onclick=" window.open('login.php');" style="float:right">Inciar sesion</a>
+ <a href="" onclick=" window.open('login.php');" style="float:right">Inciar sesión</a>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
   </a>
@@ -159,7 +159,7 @@ img-contenedor
                 
                 <dd><span>E-mail:</span><a href="#" class="link">indelsur.admon@gmail.com</a></dd>
             </dl>
-             <h1>Sigueme en las redes sociales:</h1>
+             <h1>Sigueme en redes sociales:</h1>
 
 
       <i onclick=" window.open('https://twitter.com/');" class="fa fa-twitter-square" style="font-size:48px;color:#00D2FF"></i>
