@@ -16,7 +16,7 @@ ON inmueble.est_fk = tipo_estado.id_esta WHERE `tip_in_fk`=3";
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>      
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <style type="text/css">
     .col-md-3{
   display: inline-block;
@@ -119,6 +119,7 @@ body{
 }
 footer{
    background-color: #050505;
+   height: 60px;
 }
   .contact1 {
   background: #5A5858;
@@ -252,9 +253,10 @@ function myFunction() {
   }
 }
 </script>
-<footer class="container-fluid bg-4 text-center">
-   <p>© 2019 Copy Right</p>
-        <p>Website indelsur.com by <a href="http://www.indelsur.operaciones@gmail.com/" target="_blank" rel="nofollow" class="link">www.gualipramos@gmail.com</a></p>
-</footer>  
+   <footer class=" text-center">
+  <p>© 2019 Copyright</p>
+        <p>
+southsystems@outlook.es</p>
+</footer> 
 </body>
 </html>
