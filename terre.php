@@ -164,14 +164,14 @@ h2, span{
 <div class="topnav" id="myTopnav">
   <a class="img-contenedor"><img src="im/logo.jpeg" id="m1"></a>
   <a href="index.php">Inicio</a>
-  <a href="quienes.php">Quienes Somos</a>
+  <a href="quienes.php">Quiénes Somos</a>
     <a href="apart.php" >Apartamentos</a>
   <a href="casa.php" >Casas</a>
   <a href="local.php">Locales comerciales</a>
   <a href="bodeg.php">Bodegas</a>
   <a href="terre.php" class="active">Terrenos</a>
   <a href="contacto.php">Contacto</a>
-  <a href="" onclick=" window.open('login.php');"  style="float:right">Inciar sesion</a>
+  <a href="" onclick=" window.open('login.php');"  style="float:right">Inciar sesión</a>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
   </a>
