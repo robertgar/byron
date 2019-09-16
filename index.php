@@ -224,8 +224,9 @@ function myFunction() {
 
 </script>
 <footer class="container-fluid bg-4 text-center">
-  <p>© 2019 Copy Right</p>
-        <p>Website indelsur.com by <a href="http://www.indelsur.operaciones@gmail.com/" target="_blank" rel="nofollow" class="link">www.gualipramos@gmail.com</a></p>
+  <p>© 2019 Copyright</p>
+        <p> <a href="" target="_blank" rel="nofollow" class="link">
+southsystems@outlook.es</a></p>
 </footer>  
 </body>
 </html>
