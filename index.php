@@ -118,6 +118,7 @@ body{
 }
 footer{
    background-color: #050505;
+   height: 60px;
 }
 .btn-primary{
   border-radius: 40px;
@@ -225,7 +226,7 @@ function myFunction() {
 </script>
 <footer class="container-fluid bg-4 text-center">
   <p>© 2019 Copyright</p>
-        <p> <a href="" target="_blank" rel="nofollow" class="link">
+        <p> span class="glyphicon glyphicon-envelope"></span><a href="" target="_blank" rel="nofollow" class="link">
 southsystems@outlook.es</a></p>
 </footer>  
 </body>
