@@ -85,7 +85,7 @@ body{
 }
 footer{
    background-color: #050505;
-    height: 60px;
+ 
 }
 .par{ 
   font-size: 30px;
