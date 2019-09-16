@@ -211,7 +211,7 @@ echo "<br />". "No hay datos." . "<br />";
 <div class="topnav" id="myTopnav">
   <a class="img-contenedor"><img src="im/logo.jpeg" id="m11"></a>
    <a href="index.php">Inicio</a>
-  <a href="quienes.php">Quienes Somos</a>
+  <a href="quienes.php">Quiénes Somos</a>
    <?php
  if ($row["tip_in_fk"]=='1'){
 ?>
@@ -230,7 +230,7 @@ echo "<br />". "No hay datos." . "<br />";
   <a href="bodeg.php">Bodegas</a>
   <a href="terre.php">Terrenos</a>
   <a href="contacto.php">Contacto</a>
-  <a href="" onclick=" window.open('login.php');"  style="float:right">Inciar sesion</a>
+  <a href="" onclick=" window.open('login.php');"  style="float:right">Inciar sesión</a>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
   </a>
