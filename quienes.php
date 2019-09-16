@@ -120,14 +120,14 @@ footer{
 <div class="topnav" id="myTopnav">
   <a class="img-contenedor"><img src="im/logo.jpeg" id="m1"></a>
   <a href="index.php">Incio</a>
-  <a href="quienes.php"  class="active">Quienes Somos</a>
+  <a href="quienes.php"  class="active">Quiénes Somos</a>
   <a href="apart.php">Apartamentos</a>
   <a href="casa.php">Casas</a>
      <a href="local.php">Locales comerciales</a>
   <a href="bodeg.php">Bodegas</a>
   <a href="terre.php">Terrenos</a>
   <a href="contacto.php">Contacto</a>
-  <a href="" onclick=" window.open('login.php');"  style="float:right">Inciar sesion</a>
+  <a href="" onclick=" window.open('login.php');"  style="float:right">Inciar sesión</a>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
   </a>
@@ -138,13 +138,13 @@ footer{
   <div class="row">
     <div class="col-sm-6">
    <fieldset class="well the-fieldset">
-        <legend class="the-legend par"><strong>Vision</strong></legend>
+        <legend class="the-legend par"><strong>Visión</strong></legend>
         <p align="justify" class="par">Ser la mejor opción en la prestación de servicios inmobiliarios superando las expectativas de nuestros clientes, innovando y generando calidad en lo que hacemos.</p>
     </fieldset>
     </div>
     <div class="col-sm-6">
      <fieldset class="well the-fieldset">
-        <legend class="the-legend par" ><strong>Mision</strong></legend>
+        <legend class="the-legend par" ><strong>Misión</strong></legend>
         <p align="justify" class="par">Somos una empresa dedicada a adquirir, construir  y desarrollar inmuebles para su posterior arrendamiento, en cualquier parte del territorio de Guatemala, ofreciendo a nuestros clientes un servicio personalizado, que les satisfaga sus necesidades tanto comerciales como habitacionales.</p>
     </fieldset>
     </div>
