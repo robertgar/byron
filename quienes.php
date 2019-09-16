@@ -169,7 +169,7 @@ function myFunction() {
 
 <footer class="container-fluid bg-4 text-center">
   <p>© 2019 Copyright</p>
-        <p><a  target="_blank" rel="nofollow" class="link"  style="font-size:20px"></span>
+        <p><a  target="_blank" rel="nofollow" class="link"  style="font-size:12px"></span>
 southsystems@outlook.es</a></p></p>
 </footer> 
 </body>
