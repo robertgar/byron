@@ -229,7 +229,7 @@ function myFunction() {
   <p>© 2019 Copyright</p>
         <p> <a >
           <span class="glyphicon glyphicon-envelope" style="font-size:20px"></span>
-        </a><a  target="_blank" rel="nofollow" class="link">
+        </a><a  target="_blank" rel="nofollow" class="link"  style="font-size:20px"></span>
 southsystems@outlook.es</a></p>
 </footer>  
 </body>
